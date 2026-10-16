@@ -14,9 +14,11 @@
 
 <h2>よくある質問</h2>
 <h3>データはどこに保存されますか？</h3>
-<p>あなたの端末の中だけです。アカウントもクラウド同期もありません。詳しくは<a href="../privacy/">プライバシーポリシー</a>を見てください。</p>
+<p>あなたの端末の中だけです。アカウントもクラウド同期もありません。例外は Jimoto で共有リンクを作ったリストで、「共有を止める」でサーバーから消えます。AI を使うアプリは、処理のために入力の一部を開発者の API に送りますが、保存しません。詳しくは<a href="../privacy/">プライバシーポリシー</a>を見てください。</p>
 <h3>機種を変えたら記録は引き継げますか？</h3>
 <p>アプリのデータは端末内にあるため、iPhone のバックアップ（iCloud バックアップや Mac への暗号化バックアップ）から復元すると引き継がれます。</p>
+<h3>利用の条件は？</h3>
+<p><a href="../terms/">利用規約</a>を見てください。App Store で入手したアプリには、Apple の標準使用許諾契約もあわせて適用されます。</p>
 
 <h2>アプリ別</h2>
 <section class="app" id="fold-press"><h3>スマホプレス（FOLD PRESS） <small>iPhone Duo</small></h3>
@@ -33,6 +35,34 @@
 <ul><li>本の裏の ISBN バーコードをカメラで読むと登録できます。見つからない本はタイトルで検索してください。</li></ul></section>
 <section class="app" id="uncork"><h3>Uncork <small>iPhone</small></h3>
 <ul><li>都市はタイムゾーンから推定します。違うときは設定で選び直してください。</li></ul></section>
+<section class="app" id="jimoto"><h3>Jimoto（自分のピン帳） <small>iPhone / Web</small></h3>
+<ul>
+<li><b>ピンの読み込み</b>: ブラウザで takeout.google.com を開き、「保存済み」と「マップ（マイプレイス）」だけを選んで書き出します。届いた zip を、ピン帳の「読み込む」でそのまま選ぶと、全リストが一度に入り、同じ店は1件にまとまります。</li>
+<li><b>比べる・渡す</b>: 届いた共有リンクは「比べる → 共有リンク・ファイルを開く」に貼ります。自分のリストは、ピン帳の共有ボタンから「リンクを作る」か「ファイルで渡す」。リンクは一覧に出ず、渡した人だけが開けます。</li>
+<li><b>不適切なリストを見つけたら</b>: リストの画面の「不適切な内容を報告」を押すか、上の GitHub Issues にタイトル「Jimoto: 通報」でリンクを添えて送ってください。24時間以内に確認し、規約に反するものは削除します（<a href="../terms/#jimoto">共有リストのルール</a>）。</li>
+<li><b>共有を消す</b>: 「共有を止める」でサーバーから消えます。端末のデータを消しても、共有は自動では止まりません。</li>
+<li>「AI なしの目安で選びました」と出るのは、AI の1日の上限に達したか、通信できないときです。時間をおいて試してください。</li>
+</ul></section>
+<section class="app" id="keiko"><h3>Keiko（演じて身につく防犯・救命・防災） <small>iPhone / Web</small></h3>
+<ul>
+<li><b>本当の緊急時は、アプリを閉じて 119（救急・火事）・110（事件）へ。</b>救命の内容は練習用で、普通救命講習の代わりにはなりません（<a href="../terms/#keiko">利用規約</a>）。</li>
+<li>「オフライン台本（固定）」と出るのは、AI につながらないか、1日の上限に達したときです。決まった台本で続けられます。</li>
+<li>ガイド音が聞こえないときは、音量を上げてください。iPhone アプリは消音モードでも鳴ります。</li>
+<li>記録は「稽古の記録」の画面の「記録を消す」で消せます。</li>
+</ul></section>
+<section class="app" id="sukima"><h3>スキマ切符（Sukima） <small>iPhone / Web</small></h3>
+<ul>
+<li>「いま何分ある？」に、やりたいことのストックから収まる1つだけを出します。アカウント不要で、データは端末内です。AI が使えないときは端末だけで選び、その旨を表示します。</li>
+<li>記事の本文が取れないページ（ログインが必要・PDF など）は、タイトルと分数だけで保存して、元のページで読めます。</li>
+<li>機種変更は About の「書き出す／読み込む」で。</li>
+</ul></section>
+<section class="app" id="fandrill"><h3>Fandrill（言葉の向こうの物語） <small>iPhone / Web</small></h3>
+<ul>
+<li>最初に、説明の言語・学ぶ言語・関心・レベル（CEFR A1〜C2）を選びます。今日の紙面から1〜2本選んで「ドリルを作る」。</li>
+<li>おかしな問題は、答えたあとに「この問題はおかしい」で採点と復習の棚から外せます。</li>
+<li>「今日の AI の上限に達しました」と出ても、復習の棚と前のドリルはそのまま使えます。翌日にまた作れます。</li>
+<li>ニュースの見出しを素材にする「今日の話題」は、既定でオフです（設定でオン）。Wikipedia の文章は CC BY-SA 4.0 で使っています。</li>
+</ul></section>
 
 <hr class="lang">
 
@@ -44,9 +74,11 @@ For bug reports, questions or requests, please open an issue on <a href="https:/
 </div>
 <h2>FAQ</h2>
 <h3>Where is my data stored?</h3>
-<p>Only on your device. There are no accounts and no cloud sync. See the <a href="../privacy/#en">Privacy Policy</a>.</p>
+<p>Only on your device. There are no accounts and no cloud sync. The exception is a list you share by link in Jimoto, which "Stop sharing" deletes from the server. Apps with AI send part of your input to the developer's API for processing, without storing it. See the <a href="../privacy/#en">Privacy Policy</a>.</p>
 <h3>Can I move my records to a new phone?</h3>
 <p>App data lives on your device, so restoring from an iPhone backup (iCloud Backup or an encrypted backup on a Mac) brings it over.</p>
+<h3>What are the terms of use?</h3>
+<p>See the <a href="../terms/#en">Terms of Use</a>. For apps from the App Store, Apple's Standard EULA also applies.</p>
 
 <h2>By app</h2>
 <section class="app" id="en-fold-press"><h3>FOLD PRESS <small>iPhone Duo</small></h3>
@@ -63,7 +95,35 @@ For bug reports, questions or requests, please open an issue on <a href="https:/
 <ul><li>Scan the ISBN barcode on the back of a book to add it. If it isn't found, search by title.</li></ul></section>
 <section class="app" id="en-uncork"><h3>Uncork <small>iPhone</small></h3>
 <ul><li>The city is guessed from your time zone. If it's wrong, pick another in settings.</li></ul></section>
+<section class="app" id="en-jimoto"><h3>Jimoto: Your Pin Book <small>iPhone / Web</small></h3>
+<ul>
+<li><b>Importing pins</b>: in a browser, open takeout.google.com, select only "Saved" and "Maps (your places)", and export. Pick the zip as it is in the pin book's Import; every list comes in at once and duplicates are merged.</li>
+<li><b>Compare and share</b>: paste a link you received into Compare → Open a link or file. To share yours, tap the share button in the pin book, then "Make a link" or "Share as a file". Links are unlisted; only people you send them to can open them.</li>
+<li><b>Found an inappropriate list?</b> Tap "Report this list" on the list, or open a GitHub Issue above titled "Jimoto: report" with the link. We review reports within 24 hours and remove lists that break the rules (<a href="../terms/#en-jimoto">rules for shared lists</a>).</li>
+<li><b>Removing a share</b>: "Stop sharing" deletes it from the server. Deleting your device data does not stop shares automatically.</li>
+<li>"Picked by a simple on-device estimate" means the daily AI limit was reached or there was no connection. Please try again later.</li>
+</ul></section>
+<section class="app" id="en-keiko"><h3>Keiko: Roleplay Safety Drills <small>iPhone / Web</small></h3>
+<ul>
+<li><b>In a real emergency, close the app and call for help (119 or 110 in Japan).</b> The CPR content is for practice and does not replace a certified course (<a href="../terms/#en-keiko">Terms</a>).</li>
+<li>"Offline script (fixed)" appears when the AI can't be reached or today's limit is used up. You can keep going with a fixed script.</li>
+<li>If you can't hear the beat, turn up the volume. The iPhone app plays even in silent mode.</li>
+<li>Delete your history with "Clear history" on the rehearsals screen.</li>
+</ul></section>
+<section class="app" id="en-sukima"><h3>Sukima Ticket <small>iPhone / Web</small></h3>
+<ul>
+<li>Tell Sukima how many minutes you have and it hands you one thing from your stock that fits. No account; data stays on your device. Without AI it picks on the device and says so.</li>
+<li>Pages that can't be fetched (login, PDF) can be saved with a title and minutes and read on the original page.</li>
+<li>Moving phones: Export / Import in About.</li>
+</ul></section>
+<section class="app" id="en-fandrill"><h3>Fandrill: Language &amp; Lore <small>iPhone / Web</small></h3>
+<ul>
+<li>First choose your explanation language, the language to learn, your interests and your level (CEFR A1–C2). Pick one or two passages on Today and tap "Make a drill".</li>
+<li>If a question is wrong, tap "This question is wrong" after answering; it is removed from your score and review shelf.</li>
+<li>"Today's AI limit has been reached": your review shelf and past drills still work, and new drills are available the next day.</li>
+<li>"Today's news", which uses headlines as material, is off by default (turn it on in Settings). Wikipedia text is used under CC BY-SA 4.0.</li>
+</ul></section>
 </div>
 
-<footer>© 2026 Vibes Lab ・ <a href="../privacy/">Privacy</a></footer>
+<footer>© 2026 Vibes Lab ・ <a href="../privacy/">Privacy</a> ・ <a href="../terms/">Terms</a></footer>
 </main></body></html>

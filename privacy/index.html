@@ -6,26 +6,27 @@
 <a class="label" href="../"><span class="mark"><i style="height:10px"></i><i style="height:16px"></i><i style="height:12px"></i><i style="height:7px"></i></span>Vibes Lab</a>
 
 <h1>プライバシーポリシー</h1>
-<p class="meta">最終更新日: 2026年10月16日　提供者: Naoya Toyota（個人）　<a href="#en">English</a></p>
+<p class="meta">最終更新日: 2026年10月17日　提供者: Naoya Toyota（個人）　<a href="#en">English</a></p>
 
 <div class="callout">
-<b>要約</b>: Vibes Lab のアプリは、あなたの個人情報を収集しません。広告・解析・トラッキング・アカウント登録はありません。データは基本的にあなたの端末の中だけに保存されます。アプリごとの詳細は下の「アプリ別」を見てください。
+<b>要約</b>: Vibes Lab のアプリは、あなたの個人情報を収集しません。広告・解析・トラッキング・アカウント登録はありません。データは基本的にあなたの端末の中だけに保存されます。AI を使うアプリは、処理のために入力の一部を開発者の API に送りますが、保存しません。サーバーに残るのは、Jimoto で共有リンクを作ったときのリストなど、あなたが自分で共有したものだけです。アプリごとの詳細は下の「アプリ別」を見てください。
 </div>
 
 <p>このページは Vibes Lab が提供するすべてのアプリに共通のプライバシーポリシーです。共通の方針のあとに、アプリごとに「使う機能」と「端末の外に出るもの」を書いています。</p>
 
 <h2>共通の方針</h2>
 <ul>
-<li><b>収集しない</b>: 氏名・メールアドレス・位置情報・写真などの個人情報を、私（提供者）のサーバーに集めることはありません。</li>
+<li><b>収集しない</b>: 氏名・メールアドレス・位置情報・写真などの個人情報を、私（提供者）のサーバーに集めることはありません。例外は、あなたが自分で共有したもの（Jimoto の共有リストに入れた名前や自己紹介など）だけです。</li>
 <li><b>端末内に保存</b>: 記録や設定は、あなたの端末のアプリ領域に保存します。アプリを削除すると消えます。</li>
 <li><b>広告・解析・トラッキングなし</b>: 広告、アクセス解析、クラッシュ収集、他社のアプリやサイトをまたいだ追跡（トラッキング）の仕組みは入っていません。</li>
 <li><b>第三者に提供・販売しない</b>: データを第三者に提供したり販売したりしません。</li>
+<li><b>開発者の API</b>: AI などの機能は、開発者が Cloudflare Workers 上で運営する API（vibeslab-api）を通ります。1日の回数の上限を数えるため、日付と IP アドレスを組み合わせて一方向に変換した値（ハッシュ）と回数を記録します。IP アドレスそのものは保存しません。</li>
 <li><b>外部に通信するアプリ</b>は、その相手と送る内容を下の「アプリ別」に書きます。通信先の事業者は、それぞれのポリシーに沿って通信を処理します（IPアドレスなど通信に必要な情報が相手に届きます）。</li>
-<li><b>子どものプライバシー</b>: 個人情報を収集しないため、年齢にかかわらずお使いいただけます。</li>
+<li><b>子どものプライバシー</b>: お子さまを含め、個人情報を意図して集めることはありません。対象年齢はアプリごとのストアの表示を見てください。</li>
 </ul>
 
 <h2>アプリ別</h2>
-<nav class="toc"><a href="#fold-press">スマホプレス</a><a href="#byobu">BYOBU</a><a href="#roll27">Roll27</a><a href="#bookshelf">積み上がる本棚</a><a href="#uncork">Uncork</a></nav>
+<nav class="toc"><a href="#fold-press">スマホプレス</a><a href="#byobu">BYOBU</a><a href="#roll27">Roll27</a><a href="#bookshelf">積み上がる本棚</a><a href="#uncork">Uncork</a><a href="#jimoto">Jimoto</a><a href="#keiko">Keiko</a><a href="#sukima">スキマ切符</a><a href="#fandrill">Fandrill</a></nav>
 
 <section class="app" id="fold-press"><h3>スマホプレス（FOLD PRESS） <small>iPhone Duo</small></h3>
 <ul>
@@ -62,32 +63,70 @@
 <li><b>端末の外に出るもの</b>: 天気を取得するため、選んだ都市の緯度・経度を Open-Meteo に送ります。都市を検索するときは検索語を Open-Meteo と Photon（komoot）に送ります。<a href="https://open-meteo.com/en/terms" rel="noopener">Open-Meteo</a> / <a href="https://www.komoot.com/privacy" rel="noopener">komoot</a></li>
 </ul></section>
 
+<section class="app" id="jimoto"><h3>Jimoto（自分のピン帳） <small>iPhone / Web</small></h3>
+<ul>
+<li><b>使う機能</b>: 位置情報・カメラ・写真・連絡先・マイクの許可は求めません。Google Takeout の zip・CSV・JSON を選ぶと、端末の中で展開して読みます（どこにも送りません）。</li>
+<li><b>保存</b>: ピン（店名・メモ・URL・座標・住所・エリア・リスト・行った／行きたい・タグ）、受け取ったリスト、共有のときに入れたプロフィール、設定を端末内に保存します。同じ店の照合と「好みの近さ」の計算も端末内で行います。</li>
+<li><b>端末の外に出るもの</b>:
+<ul>
+<li><b>共有リンクを作ったときだけ</b>: 選んだリスト（またはピン帳まるごと）の店（店名・メモ〔含めると選んだ場合〕・地図の URL・エリア・ジャンル・リスト名・行った／行きたい・座標）、リストの題名と街、入力したプロフィール（名前・住んだ年数・自己紹介）を、開発者のサーバー（Cloudflare Workers / D1）に保存します。一覧には出ず、リンクを知っている人だけが開けます。Web 版で「公開一覧にも載せる」を選んだときだけ、誰でも見られる一覧に出ます（iOS 版にこの選択肢はありません）。編集・削除の鍵は端末に置き、サーバーには SHA-256 で一方向に変換した値だけを保存します。「共有を止める」でサーバーから削除されます。</li>
+<li><b>通報</b>: 通報したリストの番号と、IP アドレスを一方向に変換した値（同じ人の通報を二重に数えないため）を、そのリストが削除されるまで記録します。</li>
+<li><b>AI</b>（「AI で整える」「3軒にしぼる」などを押したときだけ）: 店名・メモ・タグと選んだ条件（気分・人数・予算・エリア・ひとこと）を開発者の API に送り、Cloudflare Workers AI（Meta Llama 3.3）で処理します。保存しません。</li>
+<li><b>エリアを調べる</b>（任意・押したときだけ）: 店名とエリアを OpenStreetMap の Nominatim に送ります。</li>
+<li><b>地図</b>: 表示している範囲の地図データを OpenFreeMap から読み込みます。ピンの情報は送りません。</li>
+<li>「地図で開く」を押すと Google マップが開きます。Web 版は書体を Google Fonts から読み込みます。</li>
+</ul>
+<a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Cloudflare</a> / <a href="https://osmfoundation.org/wiki/Privacy_Policy" rel="noopener">OpenStreetMap Foundation</a> / <a href="https://policies.google.com/privacy" rel="noopener">Google</a></li>
+</ul></section>
+
+<section class="app" id="keiko"><h3>Keiko（演じて身につく防犯・救命・防災） <small>iPhone / Web</small></h3>
+<ul>
+<li><b>使う機能</b>: 位置情報・カメラ・マイクなどの許可は求めません。</li>
+<li><b>保存</b>: 稽古の記録（演目・点数・日時）と設定（言語・ガイド音など）を端末内に保存します。アプリ内の「記録を消す」でも消せます。</li>
+<li><b>端末の外に出るもの</b>: AI が相手役（詐欺の相手・だまされかけの親・119番の指令員）と場面を作るために、稽古中のやりとり（選んだ・入力した台詞と、それまでの相手の台詞）、選んだ演目と言語を開発者の API に送り、Cloudflare Workers AI で返事を作ります。会話は保存しません。台詞の中の長い数字（電話番号など）と URL は、送る前にアプリが伏せ字にします。名前などの個人情報は入力しないでください。「家族に送る」は端末の共有シートでリンクを渡すだけで、誰に送ったかをアプリは知りません。<a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Cloudflare</a></li>
+</ul></section>
+
+<section class="app" id="sukima"><h3>スキマ切符（Sukima） <small>iPhone / Web</small></h3>
+<ul>
+<li><b>使う機能</b>: タイマー終了のローカル通知（許可したときだけ）。それ以外の許可は求めません。</li>
+<li><b>保存</b>: ストック（やりたいことと所要時間）・記事の本文・きろく・設定はすべて端末内（IndexedDB）に保存します。開発者のサーバーには保存しません。</li>
+<li><b>端末の外に出るもの</b>: 記事の URL（開発者の API がそのページを取得して本文を取り出すため）。AI を使うときは、入力した一文、項目の名前・種類・分数・スキップ回数・最後にやってからの日数、いまの時刻と曜日を開発者の API に送り、Cloudflare Workers AI で処理します。API はこれらを保存しません。同じ記事の本文は、URL ごとに最大6時間キャッシュすることがあります。AI はアプリ内で切れます。<a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Cloudflare</a></li>
+</ul></section>
+
+<section class="app" id="fandrill"><h3>Fandrill（言葉の向こうの物語） <small>iPhone / Web</small></h3>
+<ul>
+<li><b>使う機能</b>: 位置情報・カメラ・マイクなどの許可は求めません。</li>
+<li><b>保存</b>: 関心（話題・推しの名前）・回答・ドリル・復習の棚・設定を端末内（IndexedDB）に保存します。設定の「この端末のデータをすべて消す」でも消せます。</li>
+<li><b>端末の外に出るもの</b>: 開いた話題（または推しとして入力した名前）、学ぶ言語、レベル、説明の言語、選んだ記事の ID を開発者の API に送ります。API はそれをもとに Wikipedia（「今日の話題」をオンにしたときは Google ニュースと SBS ニュースの RSS も）を検索し、Cloudflare Workers AI でドリルを作ります。Wikipedia やニュースサイトに問い合わせるのは開発者のサーバーで、あなたの端末ではありません（元記事のリンクを開いたときを除く）。回答・端末の識別子・位置情報は送りません。抜粋・見出し・作ったドリルは、同じものを選んだ人どうしで共有するキャッシュとしてサーバーに数日保存します。話題と入力した名前はキャッシュの見出しに含まれますが、誰が入力したかとは結び付けません。<a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Cloudflare</a> / <a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy" rel="noopener">Wikimedia</a></li>
+</ul></section>
+
 <h2>変更</h2>
 <p>アプリの追加や機能の変更にあわせて、このページを更新し、最終更新日を改めます。</p>
 
 <h2>連絡先</h2>
-<p><a href="../support/">サポートページ</a>から、GitHub Issues でご連絡ください（Issues は公開されるため、個人情報は書かないでください）。</p>
+<p><a href="../support/">サポートページ</a>から、GitHub Issues でご連絡ください（Issues は公開されるため、個人情報は書かないでください）。利用の条件は<a href="../terms/">利用規約</a>を見てください。</p>
 
 <hr class="lang">
 
 <div lang="en" id="en">
 <h1>Privacy Policy</h1>
-<p class="meta">Last updated: October 16, 2026　Provider: Naoya Toyota (individual)</p>
+<p class="meta">Last updated: October 17, 2026　Provider: Naoya Toyota (individual)</p>
 
 <div class="callout">
-<b>In short</b>: Vibes Lab apps do not collect your personal data. No ads, no analytics, no tracking, no accounts. Your data stays on your device. See "By app" below for each app's details.
+<b>In short</b>: Vibes Lab apps do not collect your personal data. No ads, no analytics, no tracking, no accounts. Your data stays on your device. Apps with AI send part of your input to the developer's API for processing, without storing it. The only things kept on a server are what you choose to share yourself, such as a list you share by link in Jimoto. See "By app" below for each app's details.
 </div>
 
 <p>This page is the privacy policy for every app made by Vibes Lab. After the shared principles, each app lists what it uses and what, if anything, leaves your device.</p>
 
 <h2>Shared principles</h2>
 <ul>
-<li><b>No collection</b>: We do not collect personal information such as your name, email, location or photos on any server of ours.</li>
+<li><b>No collection</b>: We do not collect personal information such as your name, email, location or photos on any server of ours. The only exception is what you choose to share yourself (such as the name or bio you put in a shared Jimoto list).</li>
 <li><b>Stored on your device</b>: Records and settings are saved in the app's storage on your device and are deleted when you delete the app.</li>
 <li><b>No ads, analytics or tracking</b>: The apps contain no advertising, analytics, crash reporting, or cross-app/website tracking.</li>
 <li><b>No sharing or selling</b>: We do not share or sell your data to third parties.</li>
+<li><b>The developer's API</b>: AI and similar features go through an API the developer runs on Cloudflare Workers (vibeslab-api). To count daily limits it records a one-way hash of the date combined with your IP address, plus a count. The IP address itself is not stored.</li>
 <li><b>Apps that connect to the internet</b> list the service and what is sent under "By app". Those services handle the request under their own policies (information needed to connect, such as your IP address, reaches them).</li>
-<li><b>Children</b>: Because no personal data is collected, the apps can be used by anyone.</li>
+<li><b>Children</b>: We do not knowingly collect personal information from anyone, including children. See each app's store listing for its age rating.</li>
 </ul>
 
 <h2>By app</h2>
@@ -127,12 +166,49 @@
 <li><b>Leaves your device</b>: the chosen city's latitude and longitude are sent to Open-Meteo to get the weather. When you search for a city, the search text is sent to Open-Meteo and Photon (komoot). <a href="https://open-meteo.com/en/terms" rel="noopener">Open-Meteo</a> / <a href="https://www.komoot.com/privacy" rel="noopener">komoot</a></li>
 </ul></section>
 
+<section class="app" id="en-jimoto"><h3>Jimoto: Your Pin Book <small>iPhone / Web</small></h3>
+<ul>
+<li><b>Uses</b>: no permission for location, camera, photos, contacts or microphone. Google Takeout zips, CSVs and JSON files you choose are unpacked and read on your device and are not uploaded.</li>
+<li><b>Stores</b>: your pins (names, notes, URLs, coordinates, addresses, areas, lists, Been / Want to go, tags), received lists, the profile you enter for sharing, and settings, on your device. Matching the same places and computing taste closeness also happen on your device.</li>
+<li><b>Leaves your device</b>:
+<ul>
+<li><b>Only when you make a share link</b>: the places in the list you chose (or your whole pin book) — name, note (if you chose to include notes), map URL, area, genre, list name, Been / Want to go, coordinates — plus the list title and city, and the profile you entered (name, years, bio), are stored on the developer's server (Cloudflare Workers / D1). They are not listed anywhere; only people with the link can open them. Only if you choose "Also list it in the public lists" on the web version does a list appear in a list anyone can browse (the iOS app has no such option). The edit/delete key stays on your device; the server stores only its SHA-256 hash. "Stop sharing" deletes the list from the server.</li>
+<li><b>Reports</b>: the reported list's number and a one-way hash of the reporter's IP address (so one person isn't counted twice) are kept until that list is deleted.</li>
+<li><b>AI</b> (only when you tap "Tidy with AI", "Narrow it to 3", etc.): place names, notes, tags and your request (mood, people, budget, area, your words) are sent to the developer's API and processed by Cloudflare Workers AI (Meta Llama 3.3). Nothing is stored.</li>
+<li><b>Look up areas</b> (optional, only when you tap it): place names and areas are sent to OpenStreetMap's Nominatim.</li>
+<li><b>Map</b>: map data for the visible area is loaded from OpenFreeMap. No pin data is sent.</li>
+<li>"Open in Maps" opens Google Maps. The web version loads fonts from Google Fonts.</li>
+</ul>
+<a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Cloudflare</a> / <a href="https://osmfoundation.org/wiki/Privacy_Policy" rel="noopener">OpenStreetMap Foundation</a> / <a href="https://policies.google.com/privacy" rel="noopener">Google</a></li>
+</ul></section>
+
+<section class="app" id="en-keiko"><h3>Keiko: Roleplay Safety Drills <small>iPhone / Web</small></h3>
+<ul>
+<li><b>Uses</b>: no permission for location, camera, microphone or anything else.</li>
+<li><b>Stores</b>: your rehearsal history (script, score, time) and settings (language, beat sound, etc.) on your device. "Clear history" in the app also deletes them.</li>
+<li><b>Leaves your device</b>: so the AI can play the other side (the scammer, the half-convinced parent, the 119 dispatcher) and describe scenes, the current rehearsal conversation (the lines you chose or typed, and the AI's earlier lines), the script you picked and your language are sent to the developer's API, which generates replies with Cloudflare Workers AI. The conversation is not stored. The app masks long numbers (such as phone numbers) and URLs in your lines before sending. Please don't type names or other personal details. "Send to family" just hands a link to your device's share sheet; the app doesn't know who you sent it to. <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Cloudflare</a></li>
+</ul></section>
+
+<section class="app" id="en-sukima"><h3>Sukima Ticket <small>iPhone / Web</small></h3>
+<ul>
+<li><b>Uses</b>: a local notification when a timer ends (only if you allow it). No other permissions.</li>
+<li><b>Stores</b>: your stock (things to do and their time), article text, log and settings, all on your device (IndexedDB). Nothing is stored on the developer's servers.</li>
+<li><b>Leaves your device</b>: article URLs (so the developer's API can fetch the page and extract the text). When you use AI, the line you type and the names, kinds, minutes, skip counts and days since last done of items, plus the current hour and weekday, are sent to the developer's API and processed by Cloudflare Workers AI. The API stores none of it. Article text may be cached by URL for up to 6 hours. AI can be turned off in the app. <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Cloudflare</a></li>
+</ul></section>
+
+<section class="app" id="en-fandrill"><h3>Fandrill: Language &amp; Lore <small>iPhone / Web</small></h3>
+<ul>
+<li><b>Uses</b>: no permission for location, camera, microphone or anything else.</li>
+<li><b>Stores</b>: your interests (topics and faves), answers, drills, review shelf and settings on your device (IndexedDB). "Delete all data on this device" in Settings also deletes them.</li>
+<li><b>Leaves your device</b>: the topic you open (or a fave name you typed), the language you're learning, your level, your explanation language and the IDs of the articles you pick are sent to the developer's API. The API uses them to search Wikipedia (and, only if you turn on "Today's news", Google News and SBS News RSS feeds) and builds the drill with Cloudflare Workers AI. Wikipedia and news sites are contacted by the developer's server, not by your device (except when you open an original article's link). Answers, device identifiers and location are not sent. Excerpts, headlines and generated drills are cached on the server for a few days and shared among people who pick the same ones; the topic and typed name are part of the cache key but are not linked to who typed them. <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Cloudflare</a> / <a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy" rel="noopener">Wikimedia</a></li>
+</ul></section>
+
 <h2>Changes</h2>
 <p>When apps are added or features change, this page is updated along with the date above.</p>
 
 <h2>Contact</h2>
-<p>Please reach us through GitHub Issues from the <a href="../support/">support page</a> (issues are public, so please don't include personal information).</p>
+<p>Please reach us through GitHub Issues from the <a href="../support/">support page</a> (issues are public, so please don't include personal information). For the conditions of use, see the <a href="../terms/#en">Terms of Use</a>.</p>
 </div>
 
-<footer>© 2026 Vibes Lab</footer>
+<footer>© 2026 Vibes Lab ・ <a href="../support/">Support</a> ・ <a href="../terms/">Terms</a></footer>
 </main></body></html>
