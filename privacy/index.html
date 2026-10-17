@@ -6,7 +6,7 @@
 <a class="label" href="../"><span class="mark"><i style="height:10px"></i><i style="height:16px"></i><i style="height:12px"></i><i style="height:7px"></i></span>Vibes Lab</a>
 
 <h1>プライバシーポリシー</h1>
-<p class="meta">最終更新日: 2026年10月17日　提供者: Naoya Toyota（個人）　<a href="#en">English</a></p>
+<p class="meta">最終更新日: 2026年10月18日　提供者: Naoya Toyota（個人）　<a href="#en">English</a></p>
 
 <div class="callout">
 <b>要約</b>: Vibes Lab のアプリは、あなたの個人情報を収集しません。広告・解析・トラッキング・アカウント登録はありません。データは基本的にあなたの端末の中だけに保存されます。AI を使うアプリは、処理のために入力の一部を開発者の API に送りますが、保存しません。サーバーに残るのは、Jimoto で共有リンクを作ったときのリストなど、あなたが自分で共有したものだけです。アプリごとの詳細は下の「アプリ別」を見てください。
@@ -20,7 +20,7 @@
 <li><b>端末内に保存</b>: 記録や設定は、あなたの端末のアプリ領域に保存します。アプリを削除すると消えます。</li>
 <li><b>広告・解析・トラッキングなし</b>: 広告、アクセス解析、クラッシュ収集、他社のアプリやサイトをまたいだ追跡（トラッキング）の仕組みは入っていません。</li>
 <li><b>第三者に提供・販売しない</b>: データを第三者に提供したり販売したりしません。</li>
-<li><b>開発者の API</b>: AI などの機能は、開発者が Cloudflare Workers 上で運営する API（vibeslab-api）を通ります。1日の回数の上限を数えるため、日付と IP アドレスを組み合わせて一方向に変換した値（ハッシュ）と回数を記録します。IP アドレスそのものは保存しません。</li>
+<li><b>開発者の API</b>: AI などの機能は、開発者が Cloudflare Workers 上で運営する API（vibeslab-api）を通ります。1日の回数の上限を数えるため、日付と IP アドレスに秘密の値を混ぜて一方向に変換した値（ハッシュ）と回数を記録します。IP アドレスそのものは保存しません。</li>
 <li><b>外部に通信するアプリ</b>は、その相手と送る内容を下の「アプリ別」に書きます。通信先の事業者は、それぞれのポリシーに沿って通信を処理します（IPアドレスなど通信に必要な情報が相手に届きます）。</li>
 <li><b>子どものプライバシー</b>: お子さまを含め、個人情報を意図して集めることはありません。対象年齢はアプリごとのストアの表示を見てください。</li>
 </ul>
@@ -120,7 +120,7 @@
 <ul>
 <li><b>使う機能</b>: タイマー終了のローカル通知（許可したときだけ）。それ以外の許可は求めません。</li>
 <li><b>保存</b>: ストック（やりたいことと所要時間）・記事の本文・きろく・設定はすべて端末内（IndexedDB）に保存します。開発者のサーバーには保存しません。</li>
-<li><b>端末の外に出るもの</b>: 記事の URL（開発者の API がそのページを取得して本文を取り出すため）。AI を使うときは、入力した一文、項目の名前・種類・分数・スキップ回数・最後にやってからの日数、いまの時刻と曜日を開発者の API に送り、Cloudflare Workers AI で処理します。API はこれらを保存しません。同じ記事の本文は、URL ごとに最大6時間キャッシュすることがあります。AI はアプリ内で切れます。<a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Cloudflare</a></li>
+<li><b>端末の外に出るもの</b>: 記事の URL（初めて記事を入れるときに説明したうえで、開発者の API がそのページを取得して本文を取り出すため）。AI は、最初に同意したときだけ使います。そのときは、入力した一文、項目の名前・種類・分数・メモ・スキップ回数・最後にやってからの日数、いまの時刻と曜日を開発者の API に送り、Cloudflare Workers AI 上の外部の AI モデル（Meta Llama 3.3）で処理します。API はこれらを保存しません。同じ記事の本文は、URL ごとに最大6時間キャッシュすることがあります。同意しない場合は、AI を使わず端末だけで選びます。AI の利用と記事の取得は、アプリの「このアプリについて」でいつでも止められます。<a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Cloudflare</a></li>
 </ul></section>
 
 <section class="app" id="fandrill"><h3>Fandrill（言葉の向こうの物語） <small>iPhone / Web</small></h3>
@@ -154,7 +154,7 @@
 <li><b>Stored on your device</b>: Records and settings are saved in the app's storage on your device and are deleted when you delete the app.</li>
 <li><b>No ads, analytics or tracking</b>: The apps contain no advertising, analytics, crash reporting, or cross-app/website tracking.</li>
 <li><b>No sharing or selling</b>: We do not share or sell your data to third parties.</li>
-<li><b>The developer's API</b>: AI and similar features go through an API the developer runs on Cloudflare Workers (vibeslab-api). To count daily limits it records a one-way hash of the date combined with your IP address, plus a count. The IP address itself is not stored.</li>
+<li><b>The developer's API</b>: AI and similar features go through an API the developer runs on Cloudflare Workers (vibeslab-api). To count daily limits it records a one-way hash of the date and your IP address mixed with a secret value, plus a count. The IP address itself is not stored.</li>
 <li><b>Apps that connect to the internet</b> list the service and what is sent under "By app". Those services handle the request under their own policies (information needed to connect, such as your IP address, reaches them).</li>
 <li><b>Children</b>: We do not knowingly collect personal information from anyone, including children. See each app's store listing for its age rating.</li>
 </ul>
@@ -253,7 +253,7 @@
 <ul>
 <li><b>Uses</b>: a local notification when a timer ends (only if you allow it). No other permissions.</li>
 <li><b>Stores</b>: your stock (things to do and their time), article text, log and settings, all on your device (IndexedDB). Nothing is stored on the developer's servers.</li>
-<li><b>Leaves your device</b>: article URLs (so the developer's API can fetch the page and extract the text). When you use AI, the line you type and the names, kinds, minutes, skip counts and days since last done of items, plus the current hour and weekday, are sent to the developer's API and processed by Cloudflare Workers AI. The API stores none of it. Article text may be cached by URL for up to 6 hours. AI can be turned off in the app. <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Cloudflare</a></li>
+<li><b>Leaves your device</b>: article URLs (explained the first time you add an article, so the developer's API can fetch the page and extract the text). AI is used only after you agree to it the first time. Then the line you type and the names, kinds, minutes, notes, skip counts and days since last done of items, plus the current hour and weekday, are sent to the developer's API and processed by an external AI model (Meta Llama 3.3) on Cloudflare Workers AI. The API stores none of it. Article text may be cached by URL for up to 6 hours. If you don't agree, the app picks on your device without AI. You can stop AI and article fetching anytime under "About this app". <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Cloudflare</a></li>
 </ul></section>
 
 <section class="app" id="en-fandrill"><h3>Fandrill: Language &amp; Lore <small>iPhone / Web</small></h3>
