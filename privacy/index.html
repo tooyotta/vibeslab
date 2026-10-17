@@ -113,7 +113,7 @@
 <ul>
 <li><b>使う機能</b>: 位置情報・カメラ・マイクなどの許可は求めません。</li>
 <li><b>保存</b>: 稽古の記録（演目・点数・日時）と設定（言語・ガイド音など）を端末内に保存します。アプリ内の「記録を消す」でも消せます。</li>
-<li><b>端末の外に出るもの</b>: AI が相手役（詐欺の相手・だまされかけの親・119番の指令員）と場面を作るために、稽古中のやりとり（選んだ・入力した台詞と、それまでの相手の台詞）、選んだ演目と言語を開発者の API に送り、Cloudflare Workers AI で返事を作ります。会話は保存しません。台詞の中の長い数字（電話番号など）と URL は、送る前にアプリが伏せ字にします。名前などの個人情報は入力しないでください。「家族に送る」は端末の共有シートでリンクを渡すだけで、誰に送ったかをアプリは知りません。<a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Cloudflare</a></li>
+<li><b>端末の外に出るもの</b>: 最初の稽古の前に同意をうかがったうえで、AI が相手役（詐欺の相手・だまされかけの親・119番の指令員）と場面を作るために、稽古中のやりとり（選んだ・入力した台詞と、それまでの相手の台詞）、選んだ演目と言語を開発者の API に送り、Cloudflare Workers AI 上の外部の AI モデル（Meta Llama 3.3）で返事を作ります。会話は保存しません。同意しない場合は AI を使わず、決まった台本で稽古できます。同意は「このアプリと出典」の画面でいつでも取り消せます。あなたが入力した台詞も AI の台詞も、送る前・表示する前に、長い数字（電話番号など）・URL・メールアドレス・住所らしい表記をアプリが伏せ字にします。名前・電話番号・住所は入力しないでください。「家族に送る」は端末の共有シートでリンクを渡すだけで、誰に送ったかをアプリは知りません。<a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Cloudflare</a></li>
 </ul></section>
 
 <section class="app" id="sukima"><h3>スキマ切符（Sukima） <small>iPhone / Web</small></h3>
@@ -246,7 +246,7 @@
 <ul>
 <li><b>Uses</b>: no permission for location, camera, microphone or anything else.</li>
 <li><b>Stores</b>: your rehearsal history (script, score, time) and settings (language, beat sound, etc.) on your device. "Clear history" in the app also deletes them.</li>
-<li><b>Leaves your device</b>: so the AI can play the other side (the scammer, the half-convinced parent, the 119 dispatcher) and describe scenes, the current rehearsal conversation (the lines you chose or typed, and the AI's earlier lines), the script you picked and your language are sent to the developer's API, which generates replies with Cloudflare Workers AI. The conversation is not stored. The app masks long numbers (such as phone numbers) and URLs in your lines before sending. Please don't type names or other personal details. "Send to family" just hands a link to your device's share sheet; the app doesn't know who you sent it to. <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Cloudflare</a></li>
+<li><b>Leaves your device</b>: only after you agree before your first rehearsal, and so the AI can play the other side (the scammer, the half-convinced parent, the 119 dispatcher) and describe scenes, the current rehearsal conversation (the lines you chose or typed, and the AI's earlier lines), the script you picked and your language are sent to the developer's API, which generates replies with an external AI model (Meta Llama 3.3) on Cloudflare Workers AI. The conversation is not stored. If you don't agree, you can rehearse with fixed scripts and no AI; you can withdraw consent anytime on the "About this app and sources" screen. Before sending or showing them, the app masks long numbers (such as phone numbers), URLs, email addresses and address-like text in both your lines and the AI's. Please don't type names, phone numbers or addresses. "Send to family" just hands a link to your device's share sheet; the app doesn't know who you sent it to. <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Cloudflare</a></li>
 </ul></section>
 
 <section class="app" id="en-sukima"><h3>Sukima Ticket <small>iPhone / Web</small></h3>
